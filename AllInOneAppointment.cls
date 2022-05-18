@@ -18,12 +18,12 @@ public class AllInOneAppointment {
 		List<Contact> allContacts = new List<Contact>();
 		List<Event> allEvents = new List<Event>();
 		for(AllInOneAppointment anAppointment : appointments) {
-		    Account acc = new Account(Name=anAppointment.companyName);
-		    Contact con = new Contact(LastName=anAppointment.lastName, Email=anAppointment.emailAddress);
-		    Event ev = new Event(Subject='Meet with '+anAppointment.lastName, ActivityDateTime=anAppointment.appointmentTime, DurationInMinutes=60);
-							allAccounts.add(acc);
-		    allContacts.add(con);
-		    allEvents.add(ev);
+		    	Account acc = new Account(Name=anAppointment.companyName);
+		    	Contact con = new Contact(LastName=anAppointment.lastName, Email=anAppointment.emailAddress);
+		    	Event ev = new Event(Subject='Meet with '+anAppointment.lastName, ActivityDateTime=anAppointment.appointmentTime, DurationInMinutes=60);
+			allAccounts.add(acc);
+		    	allContacts.add(con);
+		    	allEvents.add(ev);
 		}
 		insert allAccounts;
 		for(Integer x=0; x<allAccounts.size();x++) {
